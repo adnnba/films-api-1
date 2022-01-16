@@ -48,7 +48,7 @@ router.post("/signup", validateBody(signupJoi), async (req, res) => {
       subject: "Email verification", // Subject line
 
       html: `Hello, please click on this link to verify your email.
-      <a href="http://localhost:3000/email_verified/${token}">Verify email</a>`, // html body
+      <a href="https://react-films-1.herokuapp.com/email_verified/${token}">Verify email</a>`, // html body
     })
 
     await user.save()
@@ -101,7 +101,7 @@ router.post("/forgot-password", validateBody(forgotPasswordJoi), async (req, res
       subject: "Reset password", // Subject line
 
       html: `Hello, please click on this link to reset your password.
-      <a href="http://localhost:3000/reset-password/${token}">Reset password</a>`, // html body
+      <a href="https://react-films-1.herokuapp.com/reset-password/${token}">Reset password</a>`, // html body
     })
 
     res.send("reset password link sent")
